@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container } from '@material-ui/core';
+
+import { UserProvider } from './context/user-context';
+// import UseCallbackWidget from './components/UseCallbackWidget';
+// import UseMemoWidget from './components/UseMemoWidget';
+// import UserWidget from './components/UserWidget';
+import UseInputWidget from './components/UseInputWidget';
+// import UseStateWidget from './components/UseStateWidget';
+// import UseEffectWidget from './components/UseEffectWidget';
+// import TestStateWidget from './components/TestStateWidget';
+// import UseRefWidget from './components/UseRefWidget';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserProvider>
+      <Container maxWidth="sm">
+        <UseInputWidget/>
+        {/*<UseCallbackWidget/>*/}
+        {/*<UseMemoWidget/>*/}
+        {/*<UseRefWidget/>*/}
+        {/*<UseEffectWidget/>*/}
+        {/*<UseStateWidget/>*/}
+        {/*<TestStateWidget/>*/}
+        {/*<UserWidget/>*/}
+      </Container>
+    </UserProvider>
   );
 }
 

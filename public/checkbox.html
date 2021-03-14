@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #checkbox {
+      display: none;
+    }
+    label {
+      position: relative;
+    }
+    label::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-color: gray;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+    }
+    #checkbox:checked + label::after {
+      background-color: green;
+    }
+
+    h1 {
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+    }
+    h1:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+<h1>ooo</h1>
+<div class="checkbox">
+  <input type="checkbox" name="" id="checkbox"/>
+  <label for="checkbox"></label>
+</div>
+
+</body>
+</html>
