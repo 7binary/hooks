@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import copy from 'copy-to-clipboard';
 
-export default function useClipboardHook(resetInterval?: number) {
+export const useClipboardHook = (resetInterval?: number) => {
   const [isCopied, setIsCopied] = useState(false);
 
-  const handleCopy = (text: string) => {
+  const handleCopy = (text: string | number) => {
     if (typeof text === 'number' || typeof text === 'string') {
       copy(text.toString());
       setIsCopied(true);

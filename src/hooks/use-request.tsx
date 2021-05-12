@@ -7,7 +7,7 @@ interface Params {
   body: any;
 }
 
-const useRequest = ({ url, method = 'post', body = {} }: Params) => {
+export const useRequest = ({ url, method = 'post', body = {} }: Params) => {
   const [errors, setErrors] = useState<JSX.Element | null>(null);
 
   const doRequest = (params = {}) => new Promise(async (resolve, reject) => {
@@ -32,5 +32,3 @@ const useRequest = ({ url, method = 'post', body = {} }: Params) => {
 
   return { doRequest, errors };
 };
-
-export default useRequest;

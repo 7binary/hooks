@@ -1,8 +1,7 @@
 import Box from './Box';
 import { FormGroup, IconButton, TextField } from '@material-ui/core';
-import useInputValue from '../hooks/use-input-value';
-import useLogger from '../hooks/use-logger';
 import { Clear } from '@material-ui/icons';
+import { useInputValue, useLogger } from '../hooks';
 
 const UseInputWidget: React.FC = () => {
   const input = useInputValue('');

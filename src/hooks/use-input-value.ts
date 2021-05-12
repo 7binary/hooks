@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function useInputValue(defaultValue = '') {
+export const useInputValue = (defaultValue = '') => {
   const [value, setValue] = useState<string>(defaultValue);
   const clear = () => setValue('');
 
